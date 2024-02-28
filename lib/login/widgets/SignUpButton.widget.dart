@@ -2,31 +2,32 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:untitled/login/loginView.controller.dart';
 
-class LoginButton extends GetView<LoginController> {
-  const LoginButton({Key? key}) : super(key: key);
+class SignUpButton extends GetView<LoginController> {
+  const SignUpButton({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        controller.tryToLogin();
+
       },
       style: ElevatedButton.styleFrom(
-        foregroundColor: Colors.black, backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+        backgroundColor: Colors.white,
         side: const BorderSide(
           width: 2.0,
           color: Colors.black,
         ),
-        shape: RoundedRectangleBorder( // Define as bordas quadradas
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.zero,
         ),
       ),
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 16.0), // Espaçamento interno
+      child: const Padding(
+        padding: const EdgeInsets.symmetric(vertical: 16.0),
         child: Text(
-          'Entrar',
+          'Criar Conta',
           style: TextStyle(
-            fontSize: 20, // Tamanho da fonte
+            fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
         ),
